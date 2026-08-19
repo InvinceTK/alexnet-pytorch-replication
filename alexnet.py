@@ -124,10 +124,6 @@ class AlexNet(nn.Module):
 if __name__ == "__main__":
     model = AlexNet()
 
-    # api-keys
-    load_dotenv()
-    WANDB_API_KEY = os.getenv("WANDB_API_KEY")
-
     # set hyperparams
     NUM_EPOCHS = 90
     BATCH_SIZE = 128
@@ -150,6 +146,7 @@ if __name__ == "__main__":
     # api-keys
     load_dotenv()
     WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+    HF_TOKEN=os.getenv("HF_TOKEN")
 
     # set hyperparams
     NUM_EPOCHS = 1
