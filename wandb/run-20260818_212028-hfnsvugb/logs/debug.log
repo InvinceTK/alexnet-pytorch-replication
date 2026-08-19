@@ -1,0 +1,8 @@
+2026-08-18 21:20:28,575 INFO    MainThread:6016 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_212028-hfnsvugb/logs/debug.log
+2026-08-18 21:20:28,601 INFO    MainThread:6016 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_212028-hfnsvugb/logs/debug-internal.log
+2026-08-18 21:20:28,610 INFO    MainThread:6016 [wandb_init.py:monkeypatch_ipython():658] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x12b598e10>
+2026-08-18 21:20:28,618 INFO    MainThread:6016 [wandb_init.py:init():783] calling init triggers
+2026-08-18 21:20:28,623 INFO    MainThread:6016 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'lr': 10000.0, 'batch_size': 128, '_wandb': {}}
+2026-08-18 21:20:28,628 INFO    MainThread:6016 [wandb_init.py:init():831] starting backend
+2026-08-18 21:20:28,632 INFO    MainThread:6016 [wandb_init.py:init():846] sending inform_init request

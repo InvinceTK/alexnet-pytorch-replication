@@ -1,0 +1,81 @@
+50it [02:42,  3.26s/it]
+five steps taken 
+five steps taken 
+five steps taken 
+five steps taken 
+five steps taken 
+five steps taken 
+five steps taken 
+five steps taken 
+five steps taken 
+five steps taken 
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/alexnet.py", line 152, in <module>
+    for batch in tqdm(iter(train_dl)):
+                 ~~~~^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/tqdm/std.py", line 1187, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 725, in __next__
+    data = self._next_data()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 785, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/utils/data/_utils/fetch.py", line 35, in fetch
+    data.append(next(self.dataset_iter))
+                ~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 2840, in __iter__
+    for key, example in ex_iterable:
+                        ^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1428, in __iter__
+    yield from self._iter()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1625, in _iter
+    for key, transformed_example in outputs:
+                                    ^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1610, in iter_outputs
+    yield i, apply_function(key_example, i)
+             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1540, in apply_function
+    processed_inputs = self.function(*fn_args, *additional_args, **fn_kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/alexnet.py", line 40, in transform
+    img = transforms.forward(img)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torchvision/transforms/v2/_container.py", line 52, in forward
+    outputs = transform(*inputs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torchvision/transforms/v2/_transform.py", line 69, in forward
+    self.transform(inpt, params) if needs_transform else inpt
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torchvision/transforms/v2/_geometry.py", line 165, in transform
+    return self._call_kernel(
+           ~~~~~~~~~~~~~~~~~^
+        F.resize,
+        ^^^^^^^^^
+    ...<4 lines>...
+        antialias=self.antialias,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torchvision/transforms/v2/_transform.py", line 49, in _call_kernel
+    return kernel(inpt, *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torchvision/transforms/v2/functional/_utils.py", line 32, in wrapper
+    output = kernel(inpt.as_subclass(torch.Tensor), *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torchvision/transforms/v2/functional/_geometry.py", line 344, in resize_image
+    image = interpolate(
+        image,
+    ...<3 lines>...
+        antialias=antialias,
+    )
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/nn/functional.py", line 5231, in interpolate
+    return torch._C._nn._upsample_bilinear2d_aa(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<3 lines>...
+        scale_factors,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+KeyboardInterrupt

@@ -1,0 +1,34 @@
+{
+  "os":  "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.0",
+  "startedAt":  "2026-08-18T19:32:45.502591Z",
+  "program":  "/Users/elliot/Documents/alexnet-replication/alexnet.ipynb",
+  "codePath":  "/Users/elliot/Documents/alexnet-replication/alexnet.ipynb",
+  "codePathLocal":  "alexnet.ipynb",
+  "email":  "elliotkaute@gmail.com",
+  "root":  "/Users/elliot/Documents/alexnet-replication",
+  "host":  "Elliots-MacBook-Air",
+  "executable":  "/Users/elliot/Documents/alexnet-replication/venv/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "245107195904",
+      "used":  "201122365440"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "apple":  {
+    "name":  "Apple M2",
+    "ecpuCores":  4,
+    "pcpuCores":  4,
+    "gpuCores":  8,
+    "memoryGb":  16,
+    "swapTotalBytes":  "4294967296",
+    "ramTotalBytes":  "17179869184",
+    "macModel":  "Mac14,2"
+  },
+  "writerId":  "c9waecwlu8w26sce27g9h6ddbhqqw1ww"
+}

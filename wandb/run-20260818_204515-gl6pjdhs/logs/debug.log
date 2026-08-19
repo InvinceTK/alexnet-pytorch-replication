@@ -1,0 +1,25 @@
+2026-08-18 20:45:16,101 INFO    MainThread:6016 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_204515-gl6pjdhs/logs/debug.log
+2026-08-18 20:45:16,125 INFO    MainThread:6016 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_204515-gl6pjdhs/logs/debug-internal.log
+2026-08-18 20:45:16,133 INFO    MainThread:6016 [wandb_init.py:monkeypatch_ipython():658] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x12a10bb60>
+2026-08-18 20:45:16,141 INFO    MainThread:6016 [wandb_init.py:init():783] calling init triggers
+2026-08-18 20:45:16,145 INFO    MainThread:6016 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'lr': 10000.0, 'batch_size': 128, '_wandb': {}}
+2026-08-18 20:45:16,150 INFO    MainThread:6016 [wandb_init.py:init():831] starting backend
+2026-08-18 20:45:16,154 INFO    MainThread:6016 [wandb_init.py:init():846] sending inform_init request
+2026-08-18 20:45:16,290 INFO    MainThread:6016 [wandb_init.py:init():851] backend started and connected
+2026-08-18 20:45:16,549 INFO    MainThread:6016 [wandb_run.py:_label_probe_notebook():1290] probe notebook
+2026-08-18 20:45:16,567 INFO    MainThread:6016 [wandb_init.py:init():921] updated telemetry
+2026-08-18 20:45:16,651 INFO    MainThread:6016 [wandb_init.py:init():944] communicating run to backend with 90.0 second timeout
+2026-08-18 20:45:17,558 INFO    MainThread:6016 [wandb_init.py:init():981] starting run threads in backend
+2026-08-18 20:45:18,019 INFO    MainThread:6016 [wandb_run.py:_console_start():2626] atexit reg
+2026-08-18 20:45:18,077 INFO    MainThread:6016 [wandb_run.py:_redirect():2476] redirect: wrap_raw
+2026-08-18 20:45:18,083 INFO    MainThread:6016 [wandb_run.py:_redirect():2545] Wrapping output streams.
+2026-08-18 20:45:18,131 INFO    MainThread:6016 [wandb_run.py:_redirect():2568] Redirects installed.
+2026-08-18 20:45:18,192 INFO    MainThread:6016 [wandb_init.py:init():1019] run started, returning control to user process
+2026-08-18 20:49:52,921 INFO    MainThread:6016 [wandb_run.py:_finish():2397] finishing run elliot-kaute/alexnet-replication/gl6pjdhs
+2026-08-18 20:49:52,979 INFO    MainThread:6016 [jupyter.py:save_ipynb():368] not saving jupyter notebook
+2026-08-18 20:49:52,979 INFO    MainThread:6016 [wandb_init.py:_jupyter_teardown():637] cleaning up jupyter logic
+2026-08-18 20:49:52,992 INFO    MainThread:6016 [wandb_run.py:_atexit_cleanup():2593] got exitcode: 1
+2026-08-18 20:49:53,022 INFO    MainThread:6016 [wandb_run.py:_restore():2575] restore
+2026-08-18 20:49:53,031 INFO    MainThread:6016 [wandb_run.py:_restore():2581] restore done
+2026-08-18 20:49:54,533 INFO    MainThread:6016 [wandb_run.py:_footer_sync_info():4025] logging synced files

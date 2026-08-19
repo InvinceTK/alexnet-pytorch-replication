@@ -1,0 +1,18 @@
+{"time":"2026-08-18T20:53:44.810484+01:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-08-18T20:53:44.810682+01:00","level":"INFO","msg":"stream: starting","core version":"0.28.2"}
+{"time":"2026-08-18T20:53:44.92145+01:00","level":"INFO","msg":"stream: created new stream","id":"dz1km0bv"}
+{"time":"2026-08-18T20:53:44.921495+01:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-08-18T20:53:44.921711+01:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-08-18T20:53:44.921712+01:00","level":"INFO","msg":"writer: started","stream_id":"dz1km0bv"}
+{"time":"2026-08-18T20:53:44.921733+01:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-08-18T20:53:51.359268+01:00","level":"INFO","msg":"filestream: sending request","total_files":0,"uploaded_len":1}
+{"time":"2026-08-18T20:53:51.592438+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-18T20:53:53.548248+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-08-18T20:53:53.548428+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"uploaded_len":3,"complete":true,"exit_code":1}
+{"time":"2026-08-18T20:53:53.792832+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-18T20:53:53.79728+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-08-18T20:53:53.806843+01:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-08-18T20:53:53.806863+01:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-08-18T20:53:53.806968+01:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-08-18T20:53:53.80698+01:00","level":"INFO","msg":"stream: all finished"}
+{"time":"2026-08-18T20:53:55.808009+01:00","level":"ERROR","msg":"stream: failed to shut down analytics","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": context deadline exceeded context deadline exceeded]"}

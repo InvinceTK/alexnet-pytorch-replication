@@ -1,0 +1,18 @@
+{"time":"2026-08-18T21:25:29.270406+01:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-08-18T21:25:29.273038+01:00","level":"INFO","msg":"stream: starting","core version":"0.28.2"}
+{"time":"2026-08-18T21:25:29.388313+01:00","level":"INFO","msg":"stream: created new stream","id":"wit6fh5d"}
+{"time":"2026-08-18T21:25:29.388473+01:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-08-18T21:25:29.388621+01:00","level":"INFO","msg":"writer: started","stream_id":"wit6fh5d"}
+{"time":"2026-08-18T21:25:29.388621+01:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-08-18T21:25:29.388913+01:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-08-18T21:25:30.496554+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"console_offset":0,"console_lines":1}
+{"time":"2026-08-18T21:25:30.813794+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-18T21:25:38.04735+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-08-18T21:25:38.048858+01:00","level":"INFO","msg":"filestream: sending request","total_files":2,"console_offset":0,"console_lines":36,"uploaded_len":5,"complete":true,"exit_code":1}
+{"time":"2026-08-18T21:25:38.361118+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-18T21:25:38.364908+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-08-18T21:25:38.370373+01:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-08-18T21:25:38.370394+01:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-08-18T21:25:38.370528+01:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-08-18T21:25:38.370545+01:00","level":"INFO","msg":"stream: all finished"}
+{"time":"2026-08-18T21:25:40.371826+01:00","level":"ERROR","msg":"stream: failed to shut down analytics","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": net/http: request canceled (Client.Timeout exceeded while awaiting headers) context deadline exceeded]"}

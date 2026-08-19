@@ -1,0 +1,49 @@
+5it [00:15,  3.05s/it]
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/alexnet.py", line 152, in <module>
+    for batch in tqdm(iter(train_dl)):
+                 ~~~~^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/tqdm/std.py", line 1187, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 725, in __next__
+    data = self._next_data()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/utils/data/dataloader.py", line 785, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/torch/utils/data/_utils/fetch.py", line 35, in fetch
+    data.append(next(self.dataset_iter))
+                ~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 2840, in __iter__
+    for key, example in ex_iterable:
+                        ^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1428, in __iter__
+    yield from self._iter()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1625, in _iter
+    for key, transformed_example in outputs:
+                                    ^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1606, in iter_outputs
+    for i, key_example in inputs_iterator:
+                          ^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 1477, in iter_inputs
+    for key, example in iterator:
+                        ^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/iterable_dataset.py", line 2374, in __iter__
+    batch = formatter.format_batch(pa_table)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 488, in format_batch
+    batch = self.python_features_decoder.decode_batch(batch)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/formatting/formatting.py", line 250, in decode_batch
+    return self.features.decode_batch(batch, token_per_repo_id=self.token_per_repo_id) if self.features else batch
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/features/features.py", line 2273, in decode_batch
+    decode_nested_example(self[column_name], value, token_per_repo_id=token_per_repo_id)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/features/features.py", line 1524, in decode_nested_example
+    return schema.decode_example(obj, token_per_repo_id=token_per_repo_id) if obj is not None else None
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/datasets/features/image.py", line 193, in decode_example
+    image.load()  # to avoid "Too many open files" errors
+    ~~~~~~~~~~^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/PIL/ImageFile.py", line 412, in load
+    n, err_code = decoder.decode(b)
+                  ~~~~~~~~~~~~~~^^^
+KeyboardInterrupt

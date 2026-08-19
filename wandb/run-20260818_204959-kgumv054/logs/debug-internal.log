@@ -1,0 +1,18 @@
+{"time":"2026-08-18T20:49:59.394444+01:00","level":"INFO","msg":"wandb-core"}
+{"time":"2026-08-18T20:49:59.394625+01:00","level":"INFO","msg":"stream: starting","core version":"0.28.2"}
+{"time":"2026-08-18T20:49:59.504965+01:00","level":"INFO","msg":"stream: created new stream","id":"kgumv054"}
+{"time":"2026-08-18T20:49:59.505031+01:00","level":"INFO","msg":"handler: started"}
+{"time":"2026-08-18T20:49:59.505774+01:00","level":"INFO","msg":"stream: started"}
+{"time":"2026-08-18T20:49:59.505813+01:00","level":"INFO","msg":"sender: started"}
+{"time":"2026-08-18T20:49:59.505778+01:00","level":"INFO","msg":"writer: started","stream_id":"kgumv054"}
+{"time":"2026-08-18T20:50:05.384058+01:00","level":"INFO","msg":"filestream: sending request","total_files":0,"uploaded_len":1}
+{"time":"2026-08-18T20:50:05.633674+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-18T20:50:08.248633+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-08-18T20:50:08.248861+01:00","level":"INFO","msg":"filestream: sending request","total_files":1,"uploaded_len":3,"complete":true,"exit_code":1}
+{"time":"2026-08-18T20:50:08.531227+01:00","level":"INFO","msg":"filestream: request sent","status":"200 OK"}
+{"time":"2026-08-18T20:50:08.534835+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-08-18T20:50:08.541302+01:00","level":"INFO","msg":"stream: finishing up"}
+{"time":"2026-08-18T20:50:08.541319+01:00","level":"INFO","msg":"handler: closed"}
+{"time":"2026-08-18T20:50:08.541408+01:00","level":"INFO","msg":"sender: closed"}
+{"time":"2026-08-18T20:50:08.541422+01:00","level":"INFO","msg":"stream: all finished"}
+{"time":"2026-08-18T20:50:10.542259+01:00","level":"ERROR","msg":"stream: failed to shut down analytics","error":"shutdown errors: [failed to upload metrics: context deadline exceeded: retry-able request failure: Post \"https://api.wandb.ai/sdk/otel/v1/metrics\": net/http: request canceled (Client.Timeout exceeded while awaiting headers) context deadline exceeded]"}

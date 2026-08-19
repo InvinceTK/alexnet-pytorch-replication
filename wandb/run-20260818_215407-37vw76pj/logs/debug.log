@@ -1,0 +1,462 @@
+2026-08-18 21:54:07,581 INFO    MainThread:5462 [wandb_setup.py:_flush():81] Current SDK version is 0.28.2
+2026-08-18 21:54:07,581 INFO    MainThread:5462 [wandb_setup.py:_flush():81] Configure stats pid to 5462
+2026-08-18 21:54:07,582 INFO    MainThread:5462 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-08-18 21:54:07,582 INFO    MainThread:5462 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_215407-37vw76pj/logs/debug.log
+2026-08-18 21:54:07,582 INFO    MainThread:5462 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_215407-37vw76pj/logs/debug-internal.log
+2026-08-18 21:54:07,582 INFO    MainThread:5462 [wandb_init.py:monkeypatch_ipython():658] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x1201c2cf0>
+2026-08-18 21:54:07,583 INFO    MainThread:5462 [wandb_init.py:init():783] calling init triggers
+2026-08-18 21:54:07,588 INFO    MainThread:5462 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'lr': 10000.0, 'batch_size': 128, '_wandb': {}}
+2026-08-18 21:54:07,588 INFO    MainThread:5462 [wandb_init.py:init():831] starting backend
+2026-08-18 21:54:07,588 INFO    MainThread:5462 [wandb_init.py:init():846] sending inform_init request
+2026-08-18 21:54:07,720 INFO    MainThread:5462 [wandb_init.py:init():851] backend started and connected
+2026-08-18 21:54:07,739 INFO    MainThread:5462 [wandb_run.py:_label_probe_notebook():1290] probe notebook
+2026-08-18 21:54:07,752 INFO    MainThread:5462 [wandb_init.py:init():921] updated telemetry
+2026-08-18 21:54:07,792 INFO    MainThread:5462 [wandb_init.py:init():944] communicating run to backend with 90.0 second timeout
+2026-08-18 21:54:08,412 INFO    MainThread:5462 [wandb_init.py:init():981] starting run threads in backend
+2026-08-18 21:54:08,517 INFO    MainThread:5462 [wandb_run.py:_console_start():2626] atexit reg
+2026-08-18 21:54:08,517 INFO    MainThread:5462 [wandb_run.py:_redirect():2476] redirect: wrap_raw
+2026-08-18 21:54:08,517 INFO    MainThread:5462 [wandb_run.py:_redirect():2545] Wrapping output streams.
+2026-08-18 21:54:08,517 INFO    MainThread:5462 [wandb_run.py:_redirect():2568] Redirects installed.
+2026-08-18 21:54:08,520 INFO    MainThread:5462 [wandb_init.py:init():1019] run started, returning control to user process
+2026-08-18 21:58:56,461 INFO    wandb-AsyncioManager-main:5462 [service_client.py:_forward_responses():122] [no run ID] Reached EOF.
+2026-08-18 21:58:56,462 INFO    wandb-AsyncioManager-main:5462 [mailbox.py:close():154] [no run ID] Closing mailbox, abandoning 2 handles.
+2026-08-18 21:58:56,463 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/run_messages.py", line 90, in loop
+    await asyncio_compat.race(
+    ...<2 lines>...
+    )
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_compat.py", line 279, in race
+    async with open_task_group(race=True) as tg:
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 221, in __aexit__
+    await anext(self.gen)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_compat.py", line 241, in open_task_group
+    await task_group._wait_all(race=race, timeout=exit_timeout)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_compat.py", line 181, in _wait_all
+    raise exc
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/run_messages.py", line 113, in _print_all
+    result = await handle.wait_async(timeout=None)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/mailbox/mailbox_handle.py", line 127, in wait_async
+    response = await self._handle.wait_async(timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/mailbox/response_handle.py", line 123, in wait_async
+    raise HandleAbandonedError()
+wandb.sdk.mailbox.mailbox_handle.HandleAbandonedError
+2026-08-18 21:58:58,907 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:58:58,910 INFO    MainThread:5462 [wandb_run.py:_finish():2397] finishing run elliot-kaute/alexnet-replication/37vw76pj
+2026-08-18 21:58:58,913 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:58:58,914 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:58:58,914 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:58:58,915 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:58:58,915 INFO    MainThread:5462 [wandb_run.py:_finish():2397] finishing run elliot-kaute/alexnet-replication/37vw76pj
+2026-08-18 21:58:59,340 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 21:58:59,343 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:58:59,344 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:59:08,565 ERROR   wandb-AsyncioManager-main:5462 [asyncio_manager.py:fn_wrap_exceptions():197] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 195, in fn_wrap_exceptions
+    await fn()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/run_stopping.py", line 87, in loop
+    should_stop = await self._check_should_stop()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/run_stopping.py", line 115, in _check_should_stop
+    handle = await self._interface.deliver_async(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/interface/interface_sock.py", line 58, in deliver_async
+    handle = await self._client.deliver(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 57, in deliver
+    handle = self._mailbox.require_response(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/mailbox/mailbox.py", line 89, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
+2026-08-18 21:59:09,836 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 21:59:09,836 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 21:59:09,903 ERROR   MainThread:5462 [identity.py:_resolve():85] [no run ID] Failed to resolve the session identity.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/identity.py", line 81, in _resolve
+    response = self._service_api.authenticate()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 215, in authenticate
+    resp = self.send_api_request(
+        req,
+        timeout=self._timeout if timeout is None else timeout,
+    )
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 98, in send_api_request
+    session = self._get_api_session()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 75, in _get_api_session
+    response = service_connection.api_init_request(self._settings.to_proto())
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_connection.py", line 179, in api_init_request
+    handle = self._asyncer.run(lambda: self._client.deliver(request))
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 145, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 238, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 57, in deliver
+    handle = self._mailbox.require_response(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/mailbox/mailbox.py", line 89, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
+2026-08-18 21:59:09,908 ERROR   MainThread:5462 [identity.py:_resolve():85] [no run ID] Failed to resolve the session identity.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/identity.py", line 81, in _resolve
+    response = self._service_api.authenticate()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 215, in authenticate
+    resp = self.send_api_request(
+        req,
+        timeout=self._timeout if timeout is None else timeout,
+    )
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 98, in send_api_request
+    session = self._get_api_session()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 75, in _get_api_session
+    response = service_connection.api_init_request(self._settings.to_proto())
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_connection.py", line 179, in api_init_request
+    handle = self._asyncer.run(lambda: self._client.deliver(request))
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 145, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 238, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 57, in deliver
+    handle = self._mailbox.require_response(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/mailbox/mailbox.py", line 89, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
+2026-08-18 21:59:09,966 INFO    MainThread:5462 [wandb_run.py:_finish():2397] finishing run elliot-kaute/alexnet-replication/37vw76pj
+2026-08-18 21:59:09,967 ERROR   MainThread:5462 [wandb_init.py:init():1554] [no run ID] error in wandb.init()
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_init.py", line 1539, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_init.py", line 804, in init
+    self._wl.finish_all_active_runs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_setup.py", line 167, in finish_all_active_runs
+    run.finish()
+    ~~~~~~~~~~^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 328, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 373, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 2379, in finish
+    self._finish(exit_code)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 328, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 2398, in _finish
+    with telemetry.context(run=self) as tel:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/telemetry.py", line 45, in __exit__
+    self._run._telemetry_callback(self._obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 686, in _telemetry_callback
+    self._telemetry_flush()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 699, in _telemetry_flush
+    self._interface._publish_telemetry(self._telemetry_obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/interface/interface_shared.py", line 122, in _publish_telemetry
+    self._publish(rec)
+    ~~~~~~~~~~~~~^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/interface/interface_sock.py", line 46, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 145, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 238, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:59:10,614 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 21:59:13,053 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 21:59:13,053 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 21:59:13,112 ERROR   MainThread:5462 [identity.py:_resolve():85] [no run ID] Failed to resolve the session identity.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/identity.py", line 81, in _resolve
+    response = self._service_api.authenticate()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 215, in authenticate
+    resp = self.send_api_request(
+        req,
+        timeout=self._timeout if timeout is None else timeout,
+    )
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 98, in send_api_request
+    session = self._get_api_session()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 75, in _get_api_session
+    response = service_connection.api_init_request(self._settings.to_proto())
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_connection.py", line 179, in api_init_request
+    handle = self._asyncer.run(lambda: self._client.deliver(request))
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 145, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 238, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 57, in deliver
+    handle = self._mailbox.require_response(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/mailbox/mailbox.py", line 89, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
+2026-08-18 21:59:13,115 ERROR   MainThread:5462 [identity.py:_resolve():85] [no run ID] Failed to resolve the session identity.
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/identity.py", line 81, in _resolve
+    response = self._service_api.authenticate()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 215, in authenticate
+    resp = self.send_api_request(
+        req,
+        timeout=self._timeout if timeout is None else timeout,
+    )
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 98, in send_api_request
+    session = self._get_api_session()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/apis/public/service_api.py", line 75, in _get_api_session
+    response = service_connection.api_init_request(self._settings.to_proto())
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_connection.py", line 179, in api_init_request
+    handle = self._asyncer.run(lambda: self._client.deliver(request))
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 145, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 238, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 57, in deliver
+    handle = self._mailbox.require_response(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/mailbox/mailbox.py", line 89, in require_response
+    raise MailboxClosedError()
+wandb.sdk.mailbox.mailbox.MailboxClosedError
+2026-08-18 21:59:13,157 INFO    MainThread:5462 [wandb_run.py:_finish():2397] finishing run elliot-kaute/alexnet-replication/37vw76pj
+2026-08-18 21:59:13,157 ERROR   MainThread:5462 [wandb_init.py:init():1554] [no run ID] error in wandb.init()
+Traceback (most recent call last):
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_init.py", line 1539, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_init.py", line 804, in init
+    self._wl.finish_all_active_runs()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_setup.py", line 167, in finish_all_active_runs
+    run.finish()
+    ~~~~~~~~~~^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 328, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 373, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 2379, in finish
+    self._finish(exit_code)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 328, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 2398, in _finish
+    with telemetry.context(run=self) as tel:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/telemetry.py", line 45, in __exit__
+    self._run._telemetry_callback(self._obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 686, in _telemetry_callback
+    self._telemetry_flush()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/wandb_run.py", line 699, in _telemetry_flush
+    self._interface._publish_telemetry(self._telemetry_obj)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/interface/interface_shared.py", line 122, in _publish_telemetry
+    self._publish(rec)
+    ~~~~~~~~~~~~~^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/interface/interface_sock.py", line 46, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 145, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/asyncio_manager.py", line 238, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 42, in publish
+    await self._send_server_request(request)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 75, in _send_server_request
+    raise self._broken_exc.with_traceback(self._broken_tb)
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 84, in _send_server_request
+    await self._drain_writer()
+  File "/Users/elliot/Documents/alexnet-replication/venv/lib/python3.13/site-packages/wandb/sdk/lib/service/service_client.py", line 92, in _drain_writer
+    await self._writer.drain()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2026-08-18 21:59:13,440 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 22:03:34,226 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 22:03:34,227 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 22:03:34,300 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 22:03:40,943 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 22:03:40,943 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 22:03:40,998 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 22:03:41,688 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 22:03:41,688 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 22:03:41,791 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 22:03:42,235 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 22:03:42,235 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 22:03:42,302 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 22:03:42,370 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 22:03:42,370 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 22:03:42,429 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 22:03:45,959 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 22:03:45,959 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 22:03:46,016 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend
+2026-08-18 22:03:46,493 INFO    MainThread:5462 [jupyter.py:save_ipynb():368] [no run ID] not saving jupyter notebook
+2026-08-18 22:03:46,494 INFO    MainThread:5462 [wandb_init.py:_pre_run_cell_hook():613] [no run ID] pausing backend
+2026-08-18 22:03:46,549 INFO    MainThread:5462 [wandb_init.py:_post_run_cell_hook():624] [no run ID] resuming backend

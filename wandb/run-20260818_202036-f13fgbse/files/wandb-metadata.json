@@ -1,0 +1,13 @@
+{
+  "os":  "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "python":  "CPython 3.13.0",
+  "startedAt":  "2026-08-18T19:20:36.783526Z",
+  "program":  "/Users/elliot/Documents/alexnet-replication/alexnet.ipynb",
+  "codePath":  "/Users/elliot/Documents/alexnet-replication/alexnet.ipynb",
+  "codePathLocal":  "alexnet.ipynb",
+  "email":  "elliotkaute@gmail.com",
+  "root":  "/Users/elliot/Documents/alexnet-replication",
+  "host":  "Elliots-MacBook-Air",
+  "executable":  "/Users/elliot/Documents/alexnet-replication/venv/bin/python",
+  "writerId":  "2oswueuzudav5wux7mc65pnd6d1jhc7b"
+}

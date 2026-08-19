@@ -1,0 +1,5 @@
+2026-08-18 21:59:13,155 INFO    MainThread:5462 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_215913-k7ugg67u/logs/debug.log
+2026-08-18 21:59:13,155 INFO    MainThread:5462 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /Users/elliot/Documents/alexnet-replication/wandb/run-20260818_215913-k7ugg67u/logs/debug-internal.log
+2026-08-18 21:59:13,155 INFO    MainThread:5462 [wandb_init.py:init():783] calling init triggers
+2026-08-18 21:59:13,155 INFO    MainThread:5462 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'lr': 10000.0, 'batch_size': 128, '_wandb': {}}
