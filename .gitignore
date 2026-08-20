@@ -1,2 +1,4 @@
 .env
 /datasets/*
+/wandb/*
+/saved_models/*

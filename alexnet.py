@@ -20,11 +20,11 @@ from PIL import Image
 import einops
 
 from datasets import load_dataset
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Dataset
 from torchvision.transforms import v2
 
-#how to hf authenticate
-#export HF_TOKEN="[token]"
+# how to hf authenticate
+# export HF_TOKEN="[token]"
 
 
 def transform(img):
@@ -42,6 +42,22 @@ def transform(img):
     )
     img = transforms.forward(img)
     return img
+
+
+class ImageNet(Dataset):
+
+    def __init__(self):
+        self.labels = ds["label"]
+        self.imgs = ds["image"]
+
+    def __len__(self):
+        return len(self.labels)
+
+    def __getitem__(self, idx):
+        img = transform(self.imgs[idx])
+        label = torch.tensor(self.labels[idx])
+        return (img, label)
+
 
 class AlexNet(nn.Module):
     """
@@ -124,8 +140,35 @@ class AlexNet(nn.Module):
             i += 1
         return x
 
+import time
+
+def train_model():
+    global_step = 0
+
+    for epoch in range(NUM_EPOCHS):
+        running_losses = []
+        for step, (img, label) in enumerate(train_dl):
+            img, label = img.to(DEVICE), label.to(DEVICE)
+            
+            optimizer.zero_grad()
+            out = model(img)
+            loss = F.cross_entropy(out, label)
+            loss.backward()
+            optimizer.step()
+            
+            running_losses.append(loss.item())
+            
+            if step % 5 == 0 and running_losses:
+                avg_loss = sum(running_losses) / len(running_losses)
+                running_losses = []
+                run.log({
+                    'loss': avg_loss,
+                    'epoch': epoch + step / len(train_dl),  # fractional epoch
+                }, step=global_step)
+            
+            global_step += 1
+
 if __name__ == "__main__":
-    model = AlexNet()
 
     # set hyperparams
     NUM_EPOCHS = 90
@@ -133,15 +176,14 @@ if __name__ == "__main__":
     MOMENTUM = 0.9
     WEIGHT_DECAY = 5e4
     LR = 1e4
-    OUTPUT_PATH = "model.txt"
+    DEVICE = "cuda" if torch.cuda.is_available() else "mps"
+
 
     # set optimiser, loss and dataloader, and transform dataset
-    ds = load_dataset("ILSVRC/imagenet-1k", split="train", streaming=True)
-    ds = ds.map(transform)
-    train_dl = DataLoader(ds, batch_size=BATCH_SIZE, num_workers=0)
-    loss_fn = CrossEntropyLoss()
-    optimizer = Adam(model.parameters(), LR)
-
+    ds = load_dataset("ILSVRC/imagenet-1k", split="validation")
+    ds =ds[0:5000]
+    dataset = ImageNet()
+  
     # wandb init
     TEAM_ENTITY = "elliot-kaute"
     PROJECT = "alexnet-replication"
@@ -149,63 +191,39 @@ if __name__ == "__main__":
     # api-keys
     load_dotenv()
     WANDB_API_KEY = os.getenv("WANDB_API_KEY")
-    HF_TOKEN=os.getenv("HF_TOKEN")
+    HF_TOKEN = os.getenv("HF_TOKEN")
 
     # set hyperparams
     NUM_EPOCHS = 1
-    BATCH_SIZE = 128
+    BATCH_SIZE = 512
     MOMENTUM = 0.9
     WEIGHT_DECAY = 5e4
     LR = 1e4
-    OUTPUT_PATH = "saved-models/alexnet.pt"
+    OUTPUT_PATH = "./saved_models/alexnet2.pt"
 
-    # set optimiser, loss and dataloader
-    train_dl = DataLoader(ds, batch_size=BATCH_SIZE, num_workers=0)
-    loss_fn = CrossEntropyLoss()
-    optimizer = Adam(model.parameters(), LR)
 
     # wandb init
     TEAM_ENTITY = "elliot-kaute"
     PROJECT = "alexnet-replication"
 
+    # dataloader hyperparam search
+    # batch_sizes = [32,64,128,256,512]
+
     with wandb.init(
         project="alexnet-replication", config={"lr": LR, "batch_size": BATCH_SIZE}
     ) as run:
-        DEVICE = "cuda" if torch.cuda.is_available() else "mps"
+        
+        model = AlexNet()
         model.to(DEVICE)
-        for epoch in range(NUM_EPOCHS):
-            step = 0
+        loss_fn = CrossEntropyLoss()
+        optimizer = Adam(model.parameters(), LR)
+        
+        train_dl = DataLoader(dataset, batch_size=BATCH_SIZE, num_workers=8,prefetch_factor = 2)
 
-            for batch in tqdm(iter(train_dl)):
-                img = batch["image"]
-                label = batch["label"]
-                # print(img.shape, label.shape)
-                img = img.to(DEVICE)
-                label = label.to(DEVICE)
+        train_model()
+         
+        torch.save(model.state_dict(), OUTPUT_PATH)
 
-                # perform grad descent
-                with torch.no_grad():
-                    optimizer.zero_grad()
-                    out = model.forward(img)
-                    # tensor of 1000 outputs
 
-                    loss = F.cross_entropy(out, label)
-                    loss = loss_fn(out, label)
 
-                    ## !! Important | if requires_grad not set on loss then loss.backward won't run
-                    loss.requires_grad = True
-                    loss.backward()
 
-                    optimizer.step()
-
-                if step % 5 == 0:
-                    run.write_logs(f"five steps taken")
-                    run.log(
-                        {
-                            "epoch": epoch,
-                            "loss": loss,
-                        }
-                    )
-                step += 1
-
-    torch.save(model.state_dict(), OUTPUT_PATH)
