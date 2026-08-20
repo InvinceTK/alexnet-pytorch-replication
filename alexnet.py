@@ -23,6 +23,9 @@ from datasets import load_dataset
 from torch.utils.data import DataLoader
 from torchvision.transforms import v2
 
+#how to hf authenticate
+#export HF_TOKEN="[token]"
+
 
 def transform(img):
     transforms = v2.Compose(

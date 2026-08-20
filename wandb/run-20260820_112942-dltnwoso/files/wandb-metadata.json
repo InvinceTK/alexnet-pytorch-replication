@@ -1,0 +1,40 @@
+{
+  "os": "Linux-5.15.0-170-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.13",
+  "startedAt": "2026-08-20T11:29:42.976881Z",
+  "program": "/workspace/alexnet-pytorch-replication/alexnet.py",
+  "codePath": "alexnet.py",
+  "codePathLocal": "alexnet.py",
+  "git": {
+    "remote": "git@github.com:InvinceTK/alexnet-pytorch-replication.git",
+    "commit": "54a4e897958bc8c43e4ab7d7a63809ed0afb1b3c"
+  },
+  "email": "elliotkaute@gmail.com",
+  "root": "/workspace/alexnet-pytorch-replication",
+  "host": "acebc1cf9e79",
+  "executable": "/venv/main/bin/python3",
+  "cpu_count": 64,
+  "cpu_count_logical": 128,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "107374182400",
+      "used": "2052313088"
+    }
+  },
+  "memory": {
+    "total": "270283743232"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 5060 Ti",
+      "memoryTotal": "17103323136",
+      "cudaCores": 4608,
+      "architecture": "Blackwell",
+      "uuid": "GPU-bb2b5b2c-9f81-28b4-fc97-414ec6efd83a"
+    }
+  ],
+  "cudaVersion": "13.1",
+  "writerId": "zop8uunnr1krqweq3i9kdhyn4d77tfyj"
+}

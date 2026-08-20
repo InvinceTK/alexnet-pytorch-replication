@@ -1,0 +1,423 @@
+155it [09:44,  2.86s/it]
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+  warnings.warn(str(msg))
+885it [1:40:53,  2.72s/it]
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+five steps taken
+Traceback (most recent call last):
+  File "/workspace/alexnet-pytorch-replication/alexnet.py", line 176, in <module>
+    for epoch in range(NUM_EPOCHS):
+                     ^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/tqdm/std.py", line 1187, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 725, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 785, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 35, in fetch
+    data.append(next(self.dataset_iter))
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 2840, in __iter__
+    for key, example in ex_iterable:
+                        ^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 1428, in __iter__
+    yield from self._iter()
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 1625, in _iter
+    for key, transformed_example in outputs:
+                                    ^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 1606, in iter_outputs
+    for i, key_example in inputs_iterator:
+                          ^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 1477, in iter_inputs
+    for key, example in iterator:
+                        ^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 2373, in __iter__
+    for key, pa_table in self._iter_arrow():
+                         ^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 2398, in _iter_arrow
+    for key, pa_table in self.ex_iterable._iter_arrow():
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 536, in _iter_arrow
+    for key, pa_table in iterator:
+                         ^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/iterable_dataset.py", line 419, in _iter_arrow
+    for key, pa_table in self.generate_tables_fn(**gen_kwags):
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/venv/main/lib/python3.12/site-packages/datasets/packaged_modules/parquet/parquet.py", line 207, in _generate_tables
+    for batch_idx, record_batch in enumerate(
+                                   ^^^^^^^^^^
+  File "pyarrow/_dataset.pyx", line 3936, in _iterator
+  File "pyarrow/_dataset.pyx", line 3529, in pyarrow._dataset.TaggedRecordBatchIterator.__next__
+  File "<string>", line 1, in <lambda>
+KeyboardInterrupt

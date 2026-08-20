@@ -1,0 +1,24 @@
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_setup.py:_flush():81] Current SDK version is 0.28.2
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_setup.py:_flush():81] Configure stats pid to 5195
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_init.py:setup_run_log_directory():739] Logging user logs to /workspace/alexnet-pytorch-replication/wandb/run-20260820_112942-dltnwoso/logs/debug.log
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_init.py:setup_run_log_directory():740] Logging internal logs to /workspace/alexnet-pytorch-replication/wandb/run-20260820_112942-dltnwoso/logs/debug-internal.log
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_init.py:init():783] calling init triggers
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_init.py:init():788] wandb.init called with sweep_config: {}
+config: {'lr': 10000.0, 'batch_size': 128, '_wandb': {}}
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_init.py:init():831] starting backend
+2026-08-20 11:29:42,980 INFO    MainThread:5195 [wandb_init.py:init():846] sending inform_init request
+2026-08-20 11:29:43,144 INFO    MainThread:5195 [wandb_init.py:init():851] backend started and connected
+2026-08-20 11:29:43,146 INFO    MainThread:5195 [wandb_init.py:init():921] updated telemetry
+2026-08-20 11:29:43,164 INFO    MainThread:5195 [wandb_init.py:init():944] communicating run to backend with 90.0 second timeout
+2026-08-20 11:29:43,868 INFO    MainThread:5195 [wandb_init.py:init():981] starting run threads in backend
+2026-08-20 11:29:43,979 INFO    MainThread:5195 [wandb_run.py:_console_start():2626] atexit reg
+2026-08-20 11:29:43,979 INFO    MainThread:5195 [wandb_run.py:_redirect():2476] redirect: wrap_raw
+2026-08-20 11:29:43,979 INFO    MainThread:5195 [wandb_run.py:_redirect():2545] Wrapping output streams.
+2026-08-20 11:29:43,979 INFO    MainThread:5195 [wandb_run.py:_redirect():2568] Redirects installed.
+2026-08-20 11:29:43,982 INFO    MainThread:5195 [wandb_init.py:init():1019] run started, returning control to user process
+2026-08-20 15:49:49,317 INFO    MainThread:5195 [wandb_run.py:_finish():2397] finishing run elliot-kaute/alexnet-replication/dltnwoso
+2026-08-20 15:49:49,319 INFO    MainThread:5195 [wandb_run.py:_atexit_cleanup():2593] got exitcode: 1
+2026-08-20 15:49:49,319 INFO    MainThread:5195 [wandb_run.py:_restore():2575] restore
+2026-08-20 15:49:49,319 INFO    MainThread:5195 [wandb_run.py:_restore():2581] restore done
+2026-08-20 15:49:51,110 INFO    MainThread:5195 [wandb_run.py:_footer_sync_info():4025] logging synced files

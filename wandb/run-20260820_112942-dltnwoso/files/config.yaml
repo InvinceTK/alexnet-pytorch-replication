@@ -1,0 +1,60 @@
+_wandb:
+    value:
+        cli_version: 0.28.2
+        e:
+            zop8uunnr1krqweq3i9kdhyn4d77tfyj:
+                codePath: alexnet.py
+                codePathLocal: alexnet.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "107374182400"
+                        used: "2052313088"
+                email: elliotkaute@gmail.com
+                executable: /venv/main/bin/python3
+                git:
+                    commit: 54a4e897958bc8c43e4ab7d7a63809ed0afb1b3c
+                    remote: git@github.com:InvinceTK/alexnet-pytorch-replication.git
+                gpu: NVIDIA GeForce RTX 5060 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 4608
+                      memoryTotal: "17103323136"
+                      name: NVIDIA GeForce RTX 5060 Ti
+                      uuid: GPU-bb2b5b2c-9f81-28b4-fc97-414ec6efd83a
+                host: acebc1cf9e79
+                memory:
+                    total: "270283743232"
+                os: Linux-5.15.0-170-generic-x86_64-with-glibc2.39
+                program: /workspace/alexnet-pytorch-replication/alexnet.py
+                python: CPython 3.12.13
+                root: /workspace/alexnet-pytorch-replication
+                startedAt: "2026-08-20T11:29:42.976881Z"
+                writerId: zop8uunnr1krqweq3i9kdhyn4d77tfyj
+        m: []
+        python_version: 3.12.13
+        t:
+            "1":
+                - 1
+                - 41
+                - 49
+                - 51
+            "2":
+                - 1
+                - 41
+                - 49
+                - 51
+            "3":
+                - 2
+                - 16
+            "4": 3.12.13
+            "5": 0.28.2
+            "12": 0.28.2
+            "13": linux-x86_64
+batch_size:
+    value: 128
+lr:
+    value: 10000
