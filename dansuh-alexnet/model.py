@@ -85,12 +85,14 @@ class AlexNet(nn.Module):
     def init_bias(self):
         for layer in self.net:
             if isinstance(layer, nn.Conv2d):
-                nn.init.normal_(layer.weight, mean=0, std=0.01)
-                nn.init.constant_(layer.bias, 0)
+                torch.nn.init.kaiming_uniform_(layer.weight, nonlinearity = 'relu')
+        for layer in self.classifier:
+            if isinstance(layer, nn.Linear):
+                torch.nn.init.kaiming_uniform_(layer.weight, nonlinearity = 'relu')
         # original paper = 1 for Conv2d layers 2nd, 4th, and 5th conv layers
-        nn.init.constant_(self.net[4].bias, 1)
-        nn.init.constant_(self.net[10].bias, 1)
-        nn.init.constant_(self.net[12].bias, 1)
+        # nn.init.constant_(self.net[4].bias, 1)
+        # nn.init.constant_(self.net[10].bias, 1)
+        # nn.init.constant_(self.net[12].bias, 1)
 
     def forward(self, x):
         """
@@ -120,7 +122,7 @@ if __name__ == '__main__':
    
     ds = load_dataset('timm/mini-imagenet', split = 'train')
 
-    transforms = v2.compose([
+    transforms = v2.Compose([
           v2.RGB(),
           v2.CenterCrop(IMAGE_DIM),
           v2.ToTensor(),
@@ -138,7 +140,7 @@ if __name__ == '__main__':
         def __getitem__(self, idx):
             for attempt in range(10):
                 try:
-                    img = self.transforms(self.imgs[idx])
+                    img = transforms(self.imgs[idx])
                     label = torch.tensor(self.labels[idx])
                     return img, label
                 except Exception as e:
@@ -161,15 +163,21 @@ if __name__ == '__main__':
     # multiply LR by 1 / 10 after every 30 epochs
     lr_scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     print('LR Scheduler created')
-
+    
     print('Starting training...')
     total_steps = 1
+    
+    # for epoch in range(NUM_EPOCHS):
+        # lr_scheduler.step()
+        # for imgs, classes in dataloader:
+            # imgs, classes = imgs.to(device), classes.to(device)
+            
+    epoch = 1
     for epoch in range(NUM_EPOCHS):
         lr_scheduler.step()
+       
         for imgs, classes in dataloader:
             imgs, classes = imgs.to(device), classes.to(device)
-
-            # calculate the loss
             output = alexnet(imgs)
             loss = F.cross_entropy(output, classes)
 
