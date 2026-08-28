@@ -72,10 +72,10 @@ class AlexNet(nn.Module):
         )
         # classifier is just a name for linear layers
         self.classifier = nn.Sequential(
-            nn.Dropout(p=0.5, inplace=True),
+            nn.Dropout(p=0.5),
             nn.Linear(in_features=(256 * 6 * 6), out_features=4096),
             nn.ReLU(),
-            nn.Dropout(p=0.5, inplace=True),
+            nn.Dropout(p=0.5),
             nn.Linear(in_features=4096, out_features=4096),
             nn.ReLU(),
             nn.Linear(in_features=4096, out_features=num_classes),
@@ -118,9 +118,10 @@ if __name__ == '__main__':
 
     alexnet = AlexNet(num_classes=NUM_CLASSES).to(device)
    
-    ds = load_dataset('ilee0022/ImageNet100')
+    ds = load_dataset('timm/mini-imagenet', split = 'train')
 
     transforms = v2.compose([
+          v2.RGB(),
           v2.CenterCrop(IMAGE_DIM),
           v2.ToTensor(),
           v2.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
@@ -134,11 +135,16 @@ if __name__ == '__main__':
 
         def __len__(self):
             return len(self.labels)
-
         def __getitem__(self, idx):
-            img = transforms(self.imgs[idx])
-            label = torch.tensor(self.labels[idx])
-            return (img, label)
+            for attempt in range(10):
+                try:
+                    img = self.transforms(self.imgs[idx])
+                    label = torch.tensor(self.labels[idx])
+                    return img, label
+                except Exception as e:
+                    print(f"Failed idx={idx}: {e}", flush=True)
+                    idx = (idx + 1) % len(self)
+            raise RuntimeError(f"10 consecutive samples failed near idx={idx}")
         
     dataset = ImageNet()
     
@@ -150,7 +156,7 @@ if __name__ == '__main__':
         drop_last=True,
         batch_size=BATCH_SIZE)
     
-    optimizer = optim.Adam(params=alexnet.parameters(), lr=0.0001)
+    optimizer = optim.Adam(params=alexnet.parameters(), lr=0.001)
    
     # multiply LR by 1 / 10 after every 30 epochs
     lr_scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
